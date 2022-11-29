@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 55;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,6 +13,10 @@
 		0D3EA13A2935193B0038CBEC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0D3EA1382935193B0038CBEC /* Main.storyboard */; };
 		0D3EA13C2935193C0038CBEC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0D3EA13B2935193C0038CBEC /* Assets.xcassets */; };
 		0D3EA13F2935193C0038CBEC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0D3EA13D2935193C0038CBEC /* LaunchScreen.storyboard */; };
+		0D3EA14829351A900038CBEC /* ContactTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D3EA14629351A900038CBEC /* ContactTableViewCell.swift */; };
+		0D3EA14929351A900038CBEC /* ContactTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0D3EA14729351A900038CBEC /* ContactTableViewCell.xib */; };
+		0DA54FB429360D650074B4F8 /* ContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA54FB229360D650074B4F8 /* ContactViewController.swift */; };
+		0DA54FB529360D650074B4F8 /* ContactViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0DA54FB329360D650074B4F8 /* ContactViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +28,10 @@
 		0D3EA13B2935193C0038CBEC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0D3EA13E2935193C0038CBEC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0D3EA1402935193C0038CBEC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0D3EA14629351A900038CBEC /* ContactTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactTableViewCell.swift; sourceTree = "<group>"; };
+		0D3EA14729351A900038CBEC /* ContactTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ContactTableViewCell.xib; sourceTree = "<group>"; };
+		0DA54FB229360D650074B4F8 /* ContactViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactViewController.swift; sourceTree = "<group>"; };
+		0DA54FB329360D650074B4F8 /* ContactViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ContactViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +71,10 @@
 				0D3EA13B2935193C0038CBEC /* Assets.xcassets */,
 				0D3EA13D2935193C0038CBEC /* LaunchScreen.storyboard */,
 				0D3EA1402935193C0038CBEC /* Info.plist */,
+				0D3EA14629351A900038CBEC /* ContactTableViewCell.swift */,
+				0D3EA14729351A900038CBEC /* ContactTableViewCell.xib */,
+				0DA54FB229360D650074B4F8 /* ContactViewController.swift */,
+				0DA54FB329360D650074B4F8 /* ContactViewController.xib */,
 			);
 			path = iContacts;
 			sourceTree = "<group>";
@@ -103,7 +115,7 @@
 				};
 			};
 			buildConfigurationList = 0D3EA12A2935193B0038CBEC /* Build configuration list for PBXProject "iContacts" */;
-			compatibilityVersion = "Xcode 14.0";
+			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -125,6 +137,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0D3EA14929351A900038CBEC /* ContactTableViewCell.xib in Resources */,
+				0DA54FB529360D650074B4F8 /* ContactViewController.xib in Resources */,
 				0D3EA13F2935193C0038CBEC /* LaunchScreen.storyboard in Resources */,
 				0D3EA13C2935193C0038CBEC /* Assets.xcassets in Resources */,
 				0D3EA13A2935193B0038CBEC /* Main.storyboard in Resources */,
@@ -138,9 +152,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0D3EA14829351A900038CBEC /* ContactTableViewCell.swift in Sources */,
 				0D3EA1372935193B0038CBEC /* ViewController.swift in Sources */,
 				0D3EA1332935193B0038CBEC /* AppDelegate.swift in Sources */,
 				0D3EA1352935193B0038CBEC /* SceneDelegate.swift in Sources */,
+				0DA54FB429360D650074B4F8 /* ContactViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -294,6 +310,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -321,6 +338,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
