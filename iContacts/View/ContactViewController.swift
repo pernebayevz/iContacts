@@ -43,6 +43,7 @@ class ContactViewController: UIViewController {
         undoDeleteButton.layer.cornerRadius = 5
         deleteContactButton.layer.cornerRadius = 5
         
+        // Добавляет кнопку в NavigationItem
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .edit, target: self, action: #selector(editContact))
     }
     
@@ -125,15 +126,23 @@ class ContactViewController: UIViewController {
         present(alertController, animated: true)
     }
     
+    // Открывает приложения на iPhone/iPad с указанным ContactType
     func open(contactType: ContactType) {
         
+        // Извлекается номер телефона
         let phone = contact.phone
+        // Удаляются все символы '+' из сторки phone
         let phoneWithoutPlus = phone.replacingOccurrences(of: "+", with: "")
+        // Удаляются все символы ' ' (пробелы) из сторки phoneWithoutPlus
         let phoneWithoutSpacing = phoneWithoutPlus.replacingOccurrences(of: " ", with: "")
+        // Создается сторка которая указывает путь к приложению
+        let urlString: String = "\(contactType.urlScheme)" + phoneWithoutSpacing
         
-        guard let url = URL(string: "\(contactType.urlScheme)" + phoneWithoutSpacing) else {
+        // Проверяется на преображение сторки urlString в URL
+        guard let url = URL(string: urlString) else {
             return
         }
+        // Открывает приложение на iPhone/iPad с указанным путем. Например: "tel://77082968612" приложение контакты и позвонит на указанный номер
         UIApplication.shared.open(url)
     }
     
@@ -172,6 +181,7 @@ class ContactViewController: UIViewController {
         }
     }
 }
+
 
 enum ContactType {
     case message
