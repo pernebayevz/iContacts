@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0D225FFE294A5A9F00B51B62 /* ContactManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D225FFD294A5A9F00B51B62 /* ContactManager.swift */; };
 		0D3EA1332935193B0038CBEC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D3EA1322935193B0038CBEC /* AppDelegate.swift */; };
 		0D3EA1352935193B0038CBEC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D3EA1342935193B0038CBEC /* SceneDelegate.swift */; };
 		0D3EA1372935193B0038CBEC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D3EA1362935193B0038CBEC /* ViewController.swift */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0D225FFD294A5A9F00B51B62 /* ContactManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactManager.swift; sourceTree = "<group>"; };
 		0D3EA12F2935193B0038CBEC /* iContacts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iContacts.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0D3EA1322935193B0038CBEC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0D3EA1342935193B0038CBEC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -66,6 +68,7 @@
 			children = (
 				0D589A59293B65AD0003B220 /* App */,
 				0D589A5A293B65BA0003B220 /* View */,
+				0DDA8E232AB058BA00A20C3E /* Manager */,
 				0D589A5B293B660D0003B220 /* Resource */,
 			);
 			path = iContacts;
@@ -101,6 +104,14 @@
 				0D3EA13B2935193C0038CBEC /* Assets.xcassets */,
 			);
 			path = Resource;
+			sourceTree = "<group>";
+		};
+		0DDA8E232AB058BA00A20C3E /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				0D225FFD294A5A9F00B51B62 /* ContactManager.swift */,
+			);
+			path = Manager;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -180,6 +191,7 @@
 				0D3EA1372935193B0038CBEC /* ViewController.swift in Sources */,
 				0D3EA1332935193B0038CBEC /* AppDelegate.swift in Sources */,
 				0D3EA1352935193B0038CBEC /* SceneDelegate.swift in Sources */,
+				0D225FFE294A5A9F00B51B62 /* ContactManager.swift in Sources */,
 				0DA54FB429360D650074B4F8 /* ContactViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
