@@ -43,11 +43,6 @@ class ViewController: UIViewController {
         
         reloadDataSource()
     }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        
-    }
 
     /// Обнаружение нажатия кнопки add
     @IBAction func addButtonTapped(_ sender: Any) {
@@ -252,7 +247,12 @@ extension ViewController: UITableViewDelegate {
         let contact = getContact(indexPath: indexPath)
         let contactViewController = ContactViewController()
         contactViewController.contact = contact
-        contactViewController.delegate = self
+//        contactViewController.delegate = self
+        contactViewController.wasDeleted = { wasReallyDeleted in
+            if wasReallyDeleted {
+                self.reloadDataSource()
+            }
+        }
         navigationController?.pushViewController(contactViewController, animated: true)
     }
 }

@@ -33,6 +33,7 @@ class ContactViewController: UIViewController {
     var countDownTotal: Int = 5
     
     var delegate: ContactViewControllerDelegate?
+    var wasDeleted: ((Bool)->())?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -185,6 +186,7 @@ class ContactViewController: UIViewController {
             timer?.invalidate()
             navigationController?.popViewController(animated: true)
             delegate?.contactWasDeleted()
+            wasDeleted?(true)
         }
     }
 }
