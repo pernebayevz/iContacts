@@ -40,13 +40,13 @@ class ViewController: UIViewController {
         tableView.refreshControl = UIRefreshControl()
         // Таким образом отслеживается активация индикатора и вызывается метод reloadDataSource()
         tableView.refreshControl!.addTarget(self, action: #selector(reloadDataSource), for: .valueChanged)
+        
+        reloadDataSource()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        // Перезагружаем данные каждый раз при новом отображении View. Например: когда возвращаемся назад
-        reloadDataSource()
     }
 
     /// Обнаружение нажатия кнопки add
@@ -252,7 +252,15 @@ extension ViewController: UITableViewDelegate {
         let contact = getContact(indexPath: indexPath)
         let contactViewController = ContactViewController()
         contactViewController.contact = contact
+        contactViewController.delegate = self
         navigationController?.pushViewController(contactViewController, animated: true)
+    }
+}
+
+extension ViewController: ContactViewControllerDelegate {
+    
+    func contactWasDeleted() {
+        reloadDataSource()
     }
 }
 
